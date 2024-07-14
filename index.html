@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="side-nav-menu min-vh-100 position-fixed d-flex top-0" style="left: 0px;">
+        <div class="nav-tab  d-flex flex-column justify-content-between min-vh-100 p-4">
+            <div class="links">
+                <ul class="list-unstyled overflow-hidden" id="nav-list">
+                    <li onclick="openSearch(); closeSideNav()" class="py-2 position-relative cursor-pointer"
+                        style="top: 0px;">Search</li>
+                    <li onclick="displayCategories(); closeSideNav()" class="py-2 position-relative cursor-pointer"
+                        style="top: 0px;">Categories</li>
+                    <li onclick="displayAreas(); closeSideNav()" class="py-2 position-relative cursor-pointer"
+                        style="top: 0px;">Areas</li>
+                    <li onclick="displayIngredients(); closeSideNav()" class="py-2 position-relative cursor-pointer" style="top: 0px;">Ingredients</li>
+                    <li class="py-2 position-relative cursor-pointer" style="top: 0px;">Contact-Us</li>
+                </ul>
+            </div>
+            <div class="nav-footer">
+                <div class="icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="footer">
+                    <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <div class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black">
+            <img class="logo" src="#" alt="" srcset="">
+            <i class="fa-solid open-close-icon fa-2x fa-x"></i>
+            <div>
+                <i class="fa-solid fa-globe d-block"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </div>
+    <main id="main-section" class="container">
+        <section class="row py-5 g-4" id="search-inputs">
+            <div class="col-12">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="fullname-search" placeholder="Search for recipes..."
+                        aria-label="Search" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" id="firstLetter" placeholder="Search by first letter..."
+                        aria-label="Search" aria-describedby="basic-addon2" maxlength="1">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" onclick="searchForRecipe()">
+                            <i class="fa-solid fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="row py-5 g-4" id="rawData"></section>
+        <div class="loader">
+            <div class="spinner text-primary">Loading</div>
+        </div>
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- jquery -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/api_handler.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>
